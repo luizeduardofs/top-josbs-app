@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'config/router/app_router.dart';
 import 'config/themes/app_theme.dart';
 
 void main() {
@@ -11,14 +12,11 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp.router(
       title: "Top Jobs",
+      debugShowCheckedModeBanner: false,
       theme: AppTheme().getTheme(true),
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+      routerConfig: router,
     );
   }
 }

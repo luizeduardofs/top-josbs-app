@@ -4,7 +4,8 @@ const primaryColorDark = Color(0xff1a1a1a);
 const cardDarkColor = Color(0xff1a1a1a);
 const primaryColorLight = Color(0x0fff2021);
 const blackColor = Color(0xff000000);
-const scaffoldBackgroundColor = Color.fromARGB(255, 126, 75, 75);
+// const scaffoldBackgroundColor = Color.fromARGB(255, 126, 75, 75);
+const scaffoldBackgroundColor = Color(0xff1a1a1a);
 const primaryColor = Color(0xff0a69da);
 const whiteColor = Colors.white;
 
@@ -27,7 +28,7 @@ class AppTheme {
     primaryColorLight: primaryColorLight,
     cardColor: isDarkTheme ? whiteColor : blackColor,
     primaryTextTheme: Typography.whiteRedmond,
-    cardTheme: CardTheme(
+    cardTheme: CardThemeData(
       color: isDarkTheme ? cardDarkColor : whiteColor,
       surfaceTintColor: !isDarkTheme ? cardDarkColor : whiteColor,
     ),
@@ -104,7 +105,7 @@ class AppTheme {
       color: Colors.white,
     ),
 
-    dialogTheme: const DialogTheme(
+    dialogTheme: const DialogThemeData(
       surfaceTintColor: whiteColor,
       backgroundColor: whiteColor,
     ),
